@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="video-container">
+    <video #video width="640" height="480" autoplay></video>
+    <canvas #canvas width="640" height="480"></canvas>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress" [style.width]="loading + '%'"></div>
+  </div>
+
+  <div class="captured-faces">
+    <h3>Yakalanan Yüzler:</h3>
+    <div class="faces-scroll">
+      <div *ngFor="let face of capturedFaces" class="face-item">
+        <div class="main-image">
+          <img [src]="face.image" alt="Yakalanan yüz">
+        </div>
+        <div class="features">
+          <div class="feature">
+            <img [src]="face.leftEye" alt="Sol göz">
+            <span>Sol Göz</span>
+          </div>
+          <div class="feature">
+            <img [src]="face.rightEye" alt="Sağ göz">
+            <span>Sağ Göz</span>
+          </div>
+          <div class="feature">
+            <img [src]="face.nose" alt="Burun">
+            <span>Burun</span>
+          </div>
+          <div class="feature">
+            <img [src]="face.mouth" alt="Ağız">
+            <span>Ağız</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
