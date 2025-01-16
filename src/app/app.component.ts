@@ -8,7 +8,7 @@ import { FaceDetectionComponent } from './face-detection/face-detection.componen
   imports: [RouterOutlet, FaceDetectionComponent],
   template: `
   <div class="app-container">
-    <h4>Yüz Tanıma Uygulaması</h4>
+    <h1>Yüz Tanıma Uygulaması</h1>
     <app-face-detection></app-face-detection>
   </div>
   `,
